@@ -1,0 +1,547 @@
+<html>
+    <head> 
+<title> TOURIST DESTINATION </title>
+    <style>
+
+ body { 
+      * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color:ivory;
+            padding: 1px;
+            color: navy;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .header {
+            grid-area: header;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        .title-box {
+            max-width: 850px;
+            width: 100%;
+            padding: 25px;
+            background: rgba(21, 59, 80, 0.85);
+            border: 3px double var(--gold);
+            border-radius: 15px;
+        }
+
+        .title-box h1 {
+            font-family: Garamond, Georgia, serif;
+            font-size: clamp(35px, 6vw, 65px);
+            color: white;
+            letter-spacing: 2px;
+            line-height: 1.2;
+        }
+
+        .title-box p {
+            color: gold;
+            font-size: 17px;
+            letter-spacing: 2px;
+            margin-top: 10px;
+        }
+
+        .introduction {
+            grid-area: introduction;
+            background-color: cream;
+            text-align: center;
+            padding: 50px 10%;
+        }
+
+        .section-label {
+            color: green;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .introduction h2,
+        .destinations h2 {
+            font-family: Garamond, Georgia, serif;
+            font-size: clamp(32px, 4vw, 45px);
+            color: navy;
+            margin-bottom: 15px;
+        }
+
+        .introduction p {
+            max-width: 850px;
+            margin: auto;
+            color: #405A56;
+            font-size: 17px;
+        }
+
+        .destinations {
+            grid-area: destinations;
+            padding: 60px 7%;
+            background-color: #EAF1EA;
+            text-align: center;
+        }
+
+        .destinations > p {
+            color: #53635F;
+            font-size: 16px;
+        }
+
+        /* DESTINATION GRID */
+
+        .destination-grid {
+            display: grid;
+            grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+            gap: 25px;
+            margin-top: 35px;
+            text-align: left;
+        }
+
+        .destination-card {
+            background-color: white;
+            border-radius: 13px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .destination-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .destination-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+            transition: 0.5s;
+        }
+
+        .destination-card:hover img {
+            transform: scale(1.04);
+        }
+
+        .image-container {
+            overflow: hidden;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .destination-number {
+            color: green;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .card-content h3 {
+            font-family: Garamond, Georgia, serif;
+            font-size: 30px;
+            color: navy;
+            margin: 5px 0 10px;
+        }
+
+        .location {
+            color: green;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .card-content p {
+            color: #53635F;
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        .card-content h4 {
+            color: navy;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .explore-button {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 11px 22px;
+            background-color: gren);
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .explore-button:hover {
+            background-color: navy;
+            color: gold;
+            transform: translateY(-3px);
+        }
+
+        .closing {
+            background-color: navy;
+            padding: 45px 10%;
+            text-align: center;
+            color: white;
+        }
+
+        .closing h2 {
+            font-family: Garamond, Georgia, serif;
+            color: vargold;
+            font-size: 35px;
+            margin-bottom: 12px;
+        }
+
+        .closing p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 16px;
+            color: #E4ECE8;
+        }
+
+
+        .footer {
+            grid-area: footer;
+            background-color: #102D3A;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .footer p {
+            color: #D8E2DF;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: gold;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+    </head>
+<body>
+<div class="container">
+
+    <header class="header">
+
+        <div class="title-box">
+
+            <h1>TOURIST DESTINATIONS</h1>
+
+            <p>
+                Explore the Beautiful Islands of the Philippines
+            </p>
+
+        </div>
+
+    </header>
+
+    <section class="introduction">
+
+        <div class="section-label">
+            Discover the Philippines
+        </div>
+
+        <h2>Explore Our Beautiful Destinations</h2>
+
+        <p>
+            The Philippines is home to some of the world's
+            most breathtaking natural wonders. From beautiful
+            white sand beaches and crystal-clear waters to
+            majestic mountains and unique landscapes,
+            every destination offers a memorable experience.
+            Discover the beauty of our country and explore
+            the places that make the Philippines truly special.
+        </p>
+
+    </section>
+    
+    <main class="destinations" id="destinations">
+
+        <div class="section-label">
+            Travel and Explore
+        </div>
+
+        <h2>Featured Tourist Destinations</h2>
+
+        <p>
+            Discover four amazing destinations in the Philippines.
+        </p>
+
+
+        <div class="destination-grid">
+
+            <article class="destination-card">
+
+                <div class="image-container">
+
+                    <img
+                        src="https://i.pinimg.com/736x/24/ef/e4/24efe4fe46d4be1dc8184c9ff224122e.jpg"
+                        alt="Beautiful beach in Boracay Island">
+
+                </div>
+
+                <div class="card-content">
+
+                    <span class="destination-number">
+                        Destination 01
+                    </span>
+
+                    <h3>Boracay Island</h3>
+
+                    <div class="location">
+                        Location: Malay, Aklan, Western Visayas
+                    </div>
+
+                    <p>
+                        Boracay is a world-famous island known
+                        for its powdery white sand, crystal-clear
+                        waters, and beautiful sunsets. It is one
+                        of the most popular beach destinations
+                        in the Philippines.
+                    </p>
+
+                    <h4>Famous Attractions and Activities</h4>
+
+                    <p>
+                        White Beach, Puka Beach, parasailing,
+                        snorkeling, island hopping, and
+                        sunset sailing.
+                    </p>
+
+                    <h4>Why Visit?</h4>
+
+                    <p>
+                        Tourists should visit Boracay to enjoy
+                        its beautiful beaches, exciting water
+                        activities, relaxing atmosphere, and
+                        unforgettable sunsets.
+                    </p>
+
+                    <a href="#contact" class="explore-button">
+                        Explore More
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="destination-card">
+
+                <div class="image-container">
+
+                    <img
+                        src="https://i.pinimg.com/1200x/54/21/65/542165732be056c4b088113ea980fda4.jpg"
+                        alt="Limestone cliffs and clear waters of El Nido">
+
+                </div>
+
+                <div class="card-content">
+
+                    <span class="destination-number">
+                        Destination 02
+                    </span>
+
+                    <h3>El Nido, Palawan</h3>
+
+                    <div class="location">
+                        Location: Palawan, MIMAROPA Region
+                    </div>
+
+                    <p>
+                        El Nido is a breathtaking destination
+                        famous for its limestone cliffs, hidden
+                        lagoons, white sand beaches, and clear
+                        blue waters.
+                    </p>
+
+                    <h4>Famous Attractions and Activities</h4>
+
+                    <p>
+                        Big Lagoon, Small Lagoon, island hopping,
+                        kayaking, snorkeling, and swimming.
+                    </p>
+
+                    <h4>Why Visit?</h4>
+
+                    <p>
+                        Tourists should visit El Nido because
+                        of its spectacular natural scenery,
+                        peaceful beaches, and amazing
+                        island adventures.
+                    </p>
+
+                    <a href="#contact" class="explore-button">
+                        Explore More
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="destination-card">
+
+                <div class="image-container">
+
+                    <img
+                        src="https://i.pinimg.com/1200x/49/da/1c/49da1ca3d25638c199204453bce18b1e.jpg"
+                        alt="Chocolate Hills in Bohol">
+
+                </div>
+
+                <div class="card-content">
+
+                    <span class="destination-number">
+                        Destination 03
+                    </span>
+
+                    <h3>Chocolate Hills, Bohol</h3>
+
+                    <div class="location">
+                        Location: Carmen, Bohol, Central Visayas
+                    </div>
+
+                    <p>
+                        The Chocolate Hills are a unique
+                        natural attraction consisting of more
+                        than a thousand cone-shaped hills
+                        that turn brown during the dry season,
+                        resembling chocolate.
+                    </p>
+
+                    <h4>Famous Attractions and Activities</h4>
+
+                    <p>
+                        Chocolate Hills viewing deck,
+                        sightseeing, photography, and
+                        visiting nearby attractions.
+                    </p>
+
+                    <h4>Why Visit?</h4>
+
+                    <p>
+                        Tourists should visit to witness
+                        this extraordinary natural wonder
+                        and experience one of the Philippines'
+                        most unique landscapes.
+                    </p>
+
+                    <a href="#contact" class="explore-button">
+                        Explore More
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="destination-card">
+
+                <div class="image-container">
+
+                    <img
+                        src="https://i.pinimg.com/736x/04/95/6a/04956ab4f913e3c76cb2d058fb73280a.jpg"
+                        alt="Majestic Mayon Volcano in Albay">
+
+                </div>
+
+                <div class="card-content">
+
+                    <span class="destination-number">
+                        Destination 04
+                    </span>
+
+                    <h3>Mayon Volcano, Albay</h3>
+
+                    <div class="location">
+                        Location: Albay, Bicol Region
+                    </div>
+
+                    <p>
+                        Mayon Volcano is famous for its nearly
+                        perfect cone shape and breathtaking
+                        natural beauty. It is one of the most
+                        recognizable landmarks in the Philippines.
+                    </p>
+
+                    <h4>Famous Attractions and Activities</h4>
+
+                    <p>
+                        Cagsawa Ruins, sightseeing, photography,
+                        and guided tours in designated safe areas.
+                    </p>
+
+                    <h4>Why Visit?</h4>
+
+                    <p>
+                        Tourists should visit to admire its
+                        beautiful scenery, learn about its
+                        history, and experience the culture
+                        of the Bicol region.
+                    </p>
+
+                    <a href="#contact" class="explore-button">
+                        Explore More
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </main>
+
+    <section class="closing">
+
+        <h2>Your Next Adventure Awaits!</h2>
+
+        <p>
+            From the beautiful beaches of Boracay to the
+            breathtaking landscapes of Bohol, the Philippines
+            offers endless opportunities for discovery.
+            Explore our islands, experience our culture,
+            and create unforgettable memories.
+        </p>
+
+    </section>
+
+    <footer class="footer" id="contact">
+
+        <p>
+            Thank you for exploring the wonders of the Philippines!
+        </p>
+
+        <p>
+            <a href="ST2_DAEP.html">Return to Homepage</a>
+        </p>
+
+    </footer>
+
+</div>
+
+</body>
+</html>
+

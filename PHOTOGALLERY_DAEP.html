@@ -1,0 +1,280 @@
+<html>
+<head>
+    <title>Photo Collection | Wonders of the Philippines</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cream: #FCF0DA;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: ivory;
+            padding: 1px;
+            color: navy;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 25px;
+             background: linear-gradient(
+                rgba(21, 59, 80, 0.65),
+                rgba(21, 59, 80, 0.65)
+            )
+        }
+
+        .header-text h1 {
+            font-family: Garamond, Georgia, serif;
+            color: var(--cream);
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .header-text p {
+            color: white;
+            font-size: 17px;
+            letter-spacing: 2px;
+        }
+
+        /* GALLERY SECTION */
+        .gallery-section {
+            padding: 25px 15px;
+            text-align: center;
+        }
+
+        .gallery-section h2 {
+            font-family: Garamond, Georgia, serif;
+            font-size: 35px;
+            margin-bottom: 8px;
+            color: green;
+        }
+
+        .gallery-section .description {
+            margin-bottom: 25px;
+            color: #59666B;
+        }
+
+        /* GALLERY GRID */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 15px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            background-color: var(--cream);
+            border: 3px solid white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            height: 240px;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: 0.5s ease;
+        }
+
+        /* EFFECT 1: ZOOM */
+        .effect-zoom img:hover {
+            transform: scale(1.2);
+        }
+
+        /* EFFECT 2: GRAYSCALE TO COLOR */
+        .effect-gray img {
+            filter: grayscale(100%);
+            transition: 0.5s ease;
+        }
+
+        .effect-gray:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.08);
+        }
+
+        /* EFFECT 3: BRIGHTNESS */
+        .effect-bright img {
+            filter: brightness(70%);
+            transition: 0.5s ease;
+        }
+
+        .effect-bright:hover img {
+            filter: brightness(110%);
+        }
+
+        /* EFFECT 4: ROTATE */
+        .effect-rotate:hover img {
+            transform: scale(1.12) rotate(3deg);
+        }
+
+        /* EFFECT 5: BLUR TO CLEAR */
+        .effect-blur img {
+            filter: blur(2px);
+            transition: 0.5s ease;
+        }
+
+        .effect-blur:hover img {
+            filter: blur(0);
+            transform: scale(1.08);
+        }
+
+        /* EFFECT 6: CONTRAST */
+        .effect-contrast img {
+            filter: contrast(60%);
+            transition: 0.5s ease;
+        }
+
+        .effect-contrast:hover img {
+            filter: contrast(120%);
+        }
+
+        /* EFFECT 7: SLIDE */
+        .effect-slide:hover img {
+            transform: scale(1.15) translateY(-5px);
+        }
+
+        /* EFFECT 8: SATURATION */
+        .effect-saturate img {
+            filter: saturate(40%);
+            transition: 0.5s ease;
+        }
+
+        .effect-saturate:hover img {
+            filter: saturate(150%);
+            transform: scale(1.08);
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px 8px;
+            color: white;
+            font-weight: bold;
+            font-size: 17px;
+            background: linear-gradient(
+                transparent,
+                rgba(0, 0, 0, 0.85)
+            );
+            text-align: left;
+            transition: 0.3s ease;
+        }
+
+        .gallery-item:hover .caption {
+            padding-bottom: 22px;
+            color: gold;
+        }
+
+        footer {
+            background-color: navy;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .footer h3 {
+            font-family: Garamond, Georgia, serif;
+            font-size: 27px;
+            color: -gold;
+            margin-bottom: 10px;
+        }
+
+        .footer p {
+            color: #D8E2DF;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <header>
+        <div class="header-text">
+            <h1>PHOTO COLLECTION</h1>
+            <p>Discover the Beauty of the Philippines</p>
+        </div>
+    </header>
+
+    <section class="gallery-section">
+        <h2>Explore Our Gallery</h2>
+
+        <div class="gallery">
+
+            <div class="gallery-item effect-zoom">
+                <img src="https://i.pinimg.com/736x/24/ef/e4/24efe4fe46d4be1dc8184c9ff224122e.jpg"
+                     alt="Beautiful Boracay beach">
+                <div class="caption">Boracay Island</div>
+            </div>
+
+            <div class="gallery-item effect-gray">
+                <img src="https://i.pinimg.com/1200x/54/21/65/542165732be056c4b088113ea980fda4.jpg">
+                <div class="caption">El Nido, Palawan</div>
+            </div>
+
+            <div class="gallery-item effect-bright">
+                <img src="https://i.pinimg.com/1200x/49/da/1c/49da1ca3d25638c199204453bce18b1e.jpg">
+                <div class="caption">Chocolate Hills</div>
+            </div>
+
+            <div class="gallery-item effect-rotate">
+                <img src="https://i.pinimg.com/736x/04/95/6a/04956ab4f913e3c76cb2d058fb73280a.jpg">
+                <div class="caption">Mayon Volcano</div>
+            </div>
+
+            <div class="gallery-item effect-blur">
+                <img src="https://i.pinimg.com/1200x/41/bd/1c/41bd1cdcd8b51a43d3c827250a309ea9.jpg">
+                <div class="caption">Filipino Festivals</div>
+            </div>
+
+            <div class="gallery-item effect-contrast">
+                <img src="https://i.pinimg.com/736x/d2/45/50/d245505f9243efa91164c195848f70dd.jpg">
+                <div class="caption">Tinikling Dance</div>
+            </div>
+
+            <div class="gallery-item effect-slide">
+                <img src="https://i.pinimg.com/736x/af/c3/a1/afc3a15f8c3132383ffa0f64d7afe599.jpg">
+                <div class="caption">Filipino Cuisine</div>
+            </div>
+
+            <div class="gallery-item effect-saturate">
+                <img src="https://i.pinimg.com/1200x/0a/88/6d/0a886d02026874e2a10e998ebc2c23dc.jpg">
+                <div class="caption">Philippine Landscapes</div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <h3> The Wonders of the Philippines</h3>
+        <p>Celebrating the beauty, culture, and heritage of our country.</p>
+        <p>
+            <a href="ST2_DAEP.html">Return to Homepage</a>
+        </p>
+    </footer>
+
+</div>
+</body>
+</html>
